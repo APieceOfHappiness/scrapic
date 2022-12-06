@@ -7,10 +7,10 @@ import re
 
 class SteamSpider(scrapy.Spider):
     name = 'little_spiderok'
-    pages = 5  # at least 1
-    link = 'https://store.steampowered.com/search/?sort_by=_ASC&sort_order=0&term=%D0%B8%D0%BD%D0%B4%D0%B8&supportedlang=russian&page='
-    link = 'https://store.steampowered.com/search/?sort_by=&sort_order=0&term=minecraft&supportedlang=russian&page='
-    link = 'https://store.steampowered.com/search/?sort_by=&sort_order=0&term=clickers&supportedlang=russian&page='
+    pages = 2  # at least 1
+    # link = 'https://store.steampowered.com/search/?sort_by=&sort_order=0&term=strategy&supportedlang=russian&page='  # strategy
+    # link = 'https://store.steampowered.com/search/?sort_by=&sort_order=0&term=shooter&supportedlang=russian&page='  # shooters
+    link = 'https://store.steampowered.com/search/?sort_by=&sort_order=0&term=souls%20like&supportedlang=russian&page='  # souls_like
     start_urls = [link + '1']
 
     def parse(self, response):
